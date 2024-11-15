@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+  <title>
+   sanphamchitiet
+  </title>
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+
+  <link href="css/style.css" rel="stylesheet" />
+
+  <link href="css/responsive.css" rel="stylesheet" />
+  <script src="./js/giohang.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <style>
+
+     .product-container {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            padding-top: 150px;
+            position: relative;
+        }
+        .product-image {
+           max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease; 
+        }
+        .product-image:hover {
+            transform: scale(1.1);
+        }
+        .card-title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 34px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .card-text {
+            font-size: 30px;
+            color: #d9534f;
+            margin-top: 10px;
+        }
+        .product-quantity {
+            margin: 10px 0;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            margin-right: 10px;
+        }
+        .product-card {
+    display: flex; /* Use flexbox for the card */
+    flex-direction: row; /* Align items in a row */
+}
+
+.card-img-top {
+    max-width: 100%; /* Make sure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space out elements */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.product-quantity {
+    display: flex; /* Align quantity input and button in a row */
+    align-items: center; /* Center vertically */
+}
+    .btn-danger {
+            position: relative;
+            animation: shake 0.5s infinite; /* Thêm hiệu ứng rung lắc tự động */
+        }
+  </style>
+</head>
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section sticky-md-top">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="./Trangchu.html">
+          <span>
+           DREAM HOUSE
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="./Trangchu.html">Trang chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Cuahang.html">Cửa hàng</a>
+              <div class="dropdown">
+                <div class="dropdown-item"><a href="./Bodungcu.html">Bộ dụng cụ đa năng</a></div>
+                <div class="dropdown-item"><a href="./sontuong.html">Sơn tường</a></div>
+                <div class="dropdown-item"><a href="./maykhoan.html">Máy khoan</a></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Gioithieu.html">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Tintuc.html">Tin tức</a>
+              <div class="dropdown">
+                <div class="dropdown-item"><a href="#">Quảng cáo</a></div>
+                <div class="dropdown-item"><a href="#">Dịch vụ tư vấn sửa chữa</a></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Lienhe.html">Liên hệ</a>
+            </li>
+          </ul>
+          <div class="user_option">
+            <a href="">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span>Đăng nhập</span>
+            </a>
+            <a href="./Giohang.html">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          </a>
+            <form class="form-inline ">
+              <button class="btn nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i> <input style="width: 130px; margin-left: 10px; border-radius: 10px;"type="text" placeholder="Search">
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container product-container">
+            <!-- Hình ảnh sản phẩm -->
+            <div class="col-md-12 card product-card" data id="1">
+              <div class="col-md-6">
+                        <img src="./images/112.png" class="card-img-top" alt="Sản phẩm 1" style="width: 500px; height: 600px;">
+               </div>
+              <div class="col-md-6">
+                        <div class="card-body" style="padding-top: 100px;">
+                            <h5 class="card-title">Bộ dụng cụ đa năng 112 Pcs</h5>
+                            <p class="card-text">Giá: 890.000 VND</p>
+                            <p><strong>Chi tiết:</strong> Bộ sản phẩm bao gồm:
+
+                              Tua vít:
+                              Tua vít chữ thập (các size phổ biến: PH2, PH1, PZ2, PZ1)
+                              Tua vít chữ dẹt (các size phổ biến: 4mm, 5mm, 6mm)
+                              Đầu chuyển đổi để mở rộng các loại vít khác
+                              Kìm:
+                              Kìm mũi nhọn: Dùng để cắt dây, bẻ cong các vật nhỏ
+                              Kìm đa năng: Kết hợp nhiều chức năng như cắt dây, kẹp, bẻ cong
+                              Mỏ lết:
+                              Mỏ lết có thể điều chỉnh: Dùng để siết chặt các loại ốc vít, bulong
+                              Búa:
+                              Búa đóng đinh đa năng: Vừa đóng đinh, vừa có thể dùng để đập nhẹ
+                              Thước dây:
+                              Dùng để đo đạc các kích thước
+                              Bút thử điện:
+                              Kiểm tra điện áp trước khi sửa chữa
+                              Đầu khẩu:
+                              Các loại đầu khẩu phổ biến để vặn ốc vít, bulong
+                              Hộp đựng:
+                              Hộp đựng bằng nhựa cứng, giúp bảo quản dụng cụ và dễ dàng mang theo
+                              Chất liệu:
+                              
+                              Thép Cr-V: Đảm bảo độ bền cao, chống gỉ sét
+                              Tay cầm nhựa: Chống trơn trượt, tạo cảm giác thoải mái khi sử dụng</p>
+                            <p><strong>Trạng thái:</strong> Có hàng</p>
+                            <div class="product-quantity">
+                           <label for="quantity">Số lượng:</label>
+                           <input type="number" id="quantity" name="quantity" min="1" value="1" style="width: 60px;">
+                            <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                           </div>
+                        </div>
+                      </div>
+        </div>
+      </div>  
+    <div class="container">
+      <h1 class="text-center">Video Quảng Cáo</h1>
+      <div class="video-ad-container">
+          <div class="video-ad-title">Quảng Cáo Sản Phẩm Mới</div>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    </div>
+
+
+    <section class="info_section  layout_padding2-top">
+      <div class="social_container">
+        <div class="social_box">
+          <a href="">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="">
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="info_container ">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <h6>
+                Về chúng tôi
+              </h6>
+              <img src="./images/foot.png" alt="" srcset="">
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="info_form ">
+                <h6>
+                  Đăng kí ngay!
+                </h6>
+                <form action="#">
+                  <input type="email" placeholder="Nhập vào email">
+                  <button>
+                    Đăng kí
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h6>
+                Trợ giúp
+              </h6>
+              <p>
+                Trung tâm trợ giúp <br>
+                Hình thức thanh toán <br>
+                Hướng dẫn đăng nhập <br>
+                Điều khoản & Điều kiện sử dụng <br>
+                Chính sách bảo mật 
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h6>
+                Liên hệ
+              </h6>
+              <div class="info_link-box">
+                <a href="">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span> 133 Phạm Văn Đồng, Bình Thạnh, Hồ Chí Minh, Việt Nam </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span> +84365077344 </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span> Dreamhouse@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class=" footer_section">
+        <div class="container">
+          <p>
+            &copy; <span id="displayYear"></span> All Rights Reserved By
+            <a href="https://html.design/">Free Html Templates</a>
+          </p>
+        </div>
+      </footer>
+    </section>
+    
+  
+</body>
+</html>

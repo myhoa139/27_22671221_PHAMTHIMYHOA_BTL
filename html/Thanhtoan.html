@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="shortcut icon" href="../images/logo5.png" type="image/x-icon">
+      
+        <title>
+         trang chủ
+        </title>
+      
+        <!-- slider stylesheet -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+      
+        <!-- Custom styles for this template -->
+        <link href="../css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="../css/responsive.css" rel="stylesheet" />
+        <!--js-->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+        </script>
+        <script src="../js/custom.js"></script>
+        <script src="../js/giohang.js"></script>
+        <script src="../js/form.js"></script>
+        <style>
+            section{
+                width: 60%;
+                margin: 0px;
+            }
+            aside{
+               width: 40%;
+            } 
+            .container{
+                position:relative;
+            }
+            .rowck{
+                position:absolute;
+                top: 500px;
+                right: 200px;
+            }
+            .span{
+                color:red;
+            }
+        </style>
+</head>
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section sticky-md-top">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="./Trangchu.html">
+              <span>
+               <img src="../images/logohead.png" alt="" srcset="">
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="./Trangchu.html">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Tintuc.html">Tin tức</a>
+                  <div class="dropdown">
+                    <div class="dropdown-item"><a href="#">Quảng cáo</a></div>
+                    <div class="dropdown-item"><a href="#">Dịch vụ tư vấn sửa chữa</a></div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Cuahang.html">Cửa hàng</a>
+                  <div class="dropdown">
+                    <div class="dropdown-item"><a href="./Bodungcu.html">Bộ dụng cụ đa năng</a></div>
+                    <div class="dropdown-item"><a href="./sontuong.html">Sơn tường</a></div>
+                    <div class="dropdown-item"><a href="./maykhoan.html">Máy khoan</a></div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Gioithieu.html">Giới thiệu</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="./Lienhe.html">Liên hệ</a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <a href="./Formdangki.html">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span>Đăng nhập</span>
+                </a>
+                <a href="./Giohang.html">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </a>
+                <form class="form-inline "> 
+                  <input style="width: 130px; margin-left: 10px; border-radius: 10px;" type="search" placeholder="Search">
+                  <button class="btn nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </header>
+<main role="main">
+<div class="container" style="padding-top: 200px;">
+    <form class="needs-validation" name="frmthanhtoan" method="post" action="#" id="customer-info-form">
+        <div class="py-5 text-center">
+            <i class="fa fa-credit-card fa-4x" aria-hidden="true"></i>
+            <h2>Thanh toán</h2>
+            <p class="lead">Vui lòng kiểm tra thông tin Khách hàng, thông tin hóa đơn trước khi Đặt hàng.</p>
+        </div>
+        <section>
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Thông tin khách hàng</h4>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="name">Họ tên</label>
+                        <input type="text" class="form-control" name="name" id="name" required>
+                        <span id="er-name" class="er text-danger" style="display: none;">* Vui lòng nhập họ tên.</span>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="diachi">Địa chỉ</label>
+                        <input type="text" class="form-control" name="diachi" id="diachi" required>
+                        <span id="er-diachi" class="er text-danger" style="display: none;">* Vui lòng nhập địa chỉ.</span>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="dienthoai">Điện thoại</label>
+                        <input type="tel" class="form-control" name="dienthoai" id="dienthoai" required>
+                        <span id="er-dienthoai" class="er text-danger" style="display: none;">* Số điện thoại không hợp lệ. Phải bắt đầu bằng 0 và có 10 chữ số.</span>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" required>
+                        <span id="er-email" class="er text-danger" style="display: none;">* Email phải theo định dạng @gmail.com.</span>
+                    </div>
+                </div>
+
+                <h4 class="mb-3">Hình thức thanh toán</h4>
+
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input id="httt-1" name="httt_ma" type="radio" class="custom-control-input" required="" value="1">
+                        <label class="custom-control-label" for="httt-1">Tiền mặt</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="httt-2" name="httt_ma" type="radio" class="custom-control-input" required="" value="2">
+                        <label class="custom-control-label" for="httt-2">Chuyển khoản</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="httt-3" name="httt_ma" type="radio" class="custom-control-input" required="" value="3">
+                        <label class="custom-control-label" for="httt-3">Ship COD</label>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnDatHang" id="submit-button">Đặt hàng</button>
+            </div>
+        </section>
+    </form>
+</div>               
+        <div class="rowck">
+            <div class="order-summary" style="border: 1px solid rgb(115, 97, 218); background-color: bisque;">
+                <h3 class="ck-title" style="margin: 10px 10px; text-align-last: center; font-weight: bold;;">Hóa Đơn</h3>
+                <div id="product-details" style="margin: 10px 10px;"></div>
+                <div class="d-flex justify-content-between" style="margin: 10px 10px; " >
+                    <span>Tổng Tiền:</span>
+                    <span id="total-price">0 đ</span>
+                </div>
+                <div class="d-flex justify-content-between" style="margin: 10px 10px;" >
+                    <span>Số Lượng Sản Phẩm:</span>
+                    <span id="total-quantity">0</span>
+                </div>
+            </div>
+                <div class="input-group" style="padding-top: 10px;">
+                    <input type="text" class="form-control" placeholder="Mã khuyến mãi">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-secondary">Xác nhận</button>
+                    </div>
+                </div>
+                <div class="input-group" style="padding-top: 10px;">
+                    <input type="text" class="form-control" placeholder="Ghi chú cho người bán">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-success">Xác nhận</button>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+</div>
+</main>
+
+           
+<script>
+     document.getElementById('customer-info-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Lấy thông tin từ các trường
+        const name = document.getElementById('name').value;
+        const diachi = document.getElementById('diachi').value;
+        const phone = document.getElementById('dienthoai').value;
+        const email = document.getElementById('email').value;
+        const phonePattern = /^0\d{9}$/; // Số điện thoại bắt đầu bằng 0 và có 10 chữ số
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/; // Email theo dạng @gmail.com
+
+        let valid = true;
+
+        // Kiểm tra họ tên
+        if (!name) {
+            document.getElementById('er-name').style.display = 'block';
+            valid = false;
+        } else {
+            document.getElementById('er-name').style.display = 'none';
+        }
+
+        // Kiểm tra địa chỉ
+        if (!diachi) {
+            document.getElementById('er-diachi').style.display = 'block';
+            valid = false;
+        } else {
+            document.getElementById('er-diachi').style.display = 'none';
+        }
+
+        // Kiểm tra số điện thoại
+        if (!phonePattern.test(phone)) {
+            document.getElementById('er-dienthoai').style.display = 'block';
+            valid = false;
+        } else {
+            document.getElementById('er-dienthoai').style.display = 'none';
+        }
+
+        // Kiểm tra email
+        if (!emailPattern.test(email)) {
+            document.getElementById('er-email').style.display = 'block';
+            valid = false;
+        } else {
+            document.getElementById('er-email').style.display = 'none';
+        }
+
+        // Nếu tất cả hợp lệ, thông báo thành công
+        if (valid) {
+            alert('Đặt hàng thành công!');
+            // Bạn có thể thực hiện hành động gửi form ở đây nếu cần
+            // this.submit();
+        }
+    });
+
+        // Lấy thông tin giỏ hàng từ localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const productDetailsContainer = document.getElementById('product-details');
+        const totalPriceElement = document.getElementById('total-price');
+        const totalQuantityElement = document.getElementById('total-quantity');
+
+        function updateOrderSummary() {
+            let totalPrice = 0;
+            let totalQuantity = 0;
+            productDetailsContainer.innerHTML = '';
+
+            cart.forEach(product => {
+                const quantity = 1; // Mặc định là 1
+                const price = parseFloat(product.price.replace(/\D/g, ''));
+                totalPrice += price;
+                totalQuantity += quantity;
+
+                const productDetail = document.createElement('div');
+                productDetail.className = 'product-detail';
+                productDetail.innerHTML = `
+                    <h5>${product.title}</h5>
+                    <p>Giá: ${price.toLocaleString()} đ</p>
+                `;
+                productDetailsContainer.appendChild(productDetail);
+            });
+
+            totalPriceElement.textContent = `${totalPrice.toLocaleString()} đ`;
+            totalQuantityElement.textContent = totalQuantity;
+        }
+
+        document.addEventListener('DOMContentLoaded', updateOrderSummary);
+
+        document.getElementById('customer-info-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Lấy thông tin từ các trường
+            var name = document.getElementById('name').value.trim();
+            var address = document.getElementById('diachi').value.trim();
+            var phone = document.getElementById('dienthoai').value.trim();
+            var email = document.getElementById('kh_email').value.trim();
+
+            // Biểu thức chính quy cho số điện thoại
+            var phonePattern = /^0\d{9}$/;
+            // Biểu thức chính quy cho email
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            // Xóa thông báo lỗi trước đó
+            document.getElementById('er-name').textContent = '';
+            document.getElementById('er-diachi').textContent = '';
+            document.getElementById('er-dienthoai').textContent = '';
+            document.getElementById('er-email').textContent = '';
+
+            // Kiểm tra các trường thông tin
+            var isValid = true;
+
+            if (name === '') {
+                document.getElementById('er-name').textContent = 'Vui lòng nhập họ tên.';
+                isValid = false;
+            }
+
+            if (address === '') {
+                document.getElementById('er-diachi').textContent = 'Vui lòng nhập địa chỉ.';
+                isValid = false;
+            }
+
+            if (phone.test(phone)) {
+                document.getElementById('er-dienthoai').textContent = 'Số điện thoại không hợp lệ. Phải bắt đầu bằng 0 và có 10 số.';
+                isValid = false;
+            }
+
+            if (email.test(email)) {
+                document.getElementById('er-email').textContent = 'Địa chỉ email không hợp lệ.';
+                isValid = false;
+            }
+
+            // Nếu tất cả thông tin hợp lệ
+            if (isValid) {
+                alert('Thanh toán thành công!');
+                // Có thể thêm mã xử lý thanh toán ở đây
+            }
+        });
+        const customerForm = document.getElementById('customer-info-form');
+customerForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Ngăn chặn form submit mặc định
+
+  // Lấy thông tin khách hàng và hóa đơn
+  const customerInfo = getCustomerInfo();
+  const orderDetails = getOrderDetails();
+
+  // Lưu thông tin vào localStorage
+  saveToLocalStorage(customerInfo, orderDetails);
+
+  // Chuyển hướng đến trang lịch sử mua hàng
+  window.location.href = 'Taikhoan.html';
+});
+
+function getCustomerInfo() {
+  return {
+    name: document.getElementById('name').value,
+    diachi: document.getElementById('diachi').value,
+    dienthoai: document.getElementById('dienthoai').value,
+    email: document.getElementById('email').value,
+    httt_ma: document.querySelector('input[name="httt_ma"]:checked').value
+  };
+}
+
+function getOrderDetails() {
+  return {
+    totalPrice: parseFloat(document.getElementById('total-price').textContent.replace(/[^0-9.-]+/g, "")),
+    totalQuantity: parseInt(document.getElementById('total-quantity').textContent),
+    coupon: document.querySelector('.input-group input[placeholder="Mã khuyến mãi"]').value,
+    note: document.querySelector('.input-group input[placeholder="Ghi chú cho người bán"]').value
+  };
+}
+
+function saveToLocalStorage(customerInfo, orderDetails) {
+  // Lưu thông tin khách hàng
+  localStorage.setItem('customerInfo', JSON.stringify(customerInfo));
+
+  // Lấy lịch sử đơn hàng cũ
+  let orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+  
+  // Thêm đơn hàng mới vào lịch sử
+  orderHistory.push({
+    date: new Date().toISOString(),
+    ...orderDetails
+  });
+
+  // Lưu lại lịch sử đơn hàng
+  localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+}
+</script>
+</body>
+
+</html>

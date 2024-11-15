@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./header_menu.html">
+    <!--js-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script src="js/custom.js"></script>
+    <script src="./js/giohang.js"></script>
+    <style>
+    .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+      }
+      
+      .table th,
+      .table td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+      }
+      
+      .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+      }
+      
+      .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+      </style>
+</head>
+<body>
+  <div class="hero_area">
+    <header class="header_section sticky-md-top">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="./Trangchu.html">
+          <span>
+           <img src="./images/logo.png" alt="" srcset="">
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="./Trangchu.html">Trang chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Tintuc.html">Tin tức</a>
+              <div class="dropdown">
+                <div class="dropdown-item"><a href="#">Quảng cáo</a></div>
+                <div class="dropdown-item"><a href="#">Dịch vụ tư vấn sửa chữa</a></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Cuahang.html">Cửa hàng</a>
+              <div class="dropdown">
+                <div class="dropdown-item"><a href="./Bodungcu.html">Bộ dụng cụ đa năng</a></div>
+                <div class="dropdown-item"><a href="./sontuong.html">Sơn tường</a></div>
+                <div class="dropdown-item"><a href="./maykhoan.html">Máy khoan</a></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Gioithieu.html">Giới thiệu</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="./Lienhe.html">Liên hệ</a>
+            </li>
+          </ul>
+          <div class="user_option">
+            <a href="./Formdangki.html">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span>Đăng nhập</span>
+            </a>
+            <a href="./Giohang.html">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            </a>
+            <form class="form-inline "> 
+              <input style="width: 130px; margin-left: 10px; border-radius: 10px;" type="search" placeholder="Search">
+              <button class="btn nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="customer-info" style="padding-top: 200px;">
+      <h3>Thông tin khách hàng</h3>
+      <table class="table table-striped">
+          <tr>
+              <th>Thông tin</th>
+              <th>Chi tiết</th>
+          </tr>
+          <tr>
+              <td>Họ tên</td>
+              <td><span id="customer-name"></span></td>
+          </tr>
+          <tr>
+              <td>Địa chỉ</td>
+              <td><span id="customer-address"></span></td>
+          </tr>
+          <tr>
+              <td>Điện thoại</td>
+              <td><span id="customer-phone"></span></td>
+          </tr>
+          <tr>
+              <td>Email</td>
+              <td><span id="customer-email"></span></td>
+          </tr>
+          <tr>
+              <td>Hình thức thanh toán</td>
+              <td><span id="payment-method"></span></td>
+          </tr>
+      </table>
+  </div>
+      
+        <div class="order-summary">
+          <h3>Lịch sử đơn hàng</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Stt</th>
+                <th>Ngày mua</th>
+                <th>Tổng tiền</th>
+                <th>Số lượng</th>
+                <th>Mã khuyến mãi</th>
+                <th>Ghi chú</th>
+              </tr>
+            </thead>
+            <tbody id="order-history"></tbody>
+          </table>
+        </div>
+      </div>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+
+  // Hiển thị thông tin khách hàng
+  const customerInfo = JSON.parse(localStorage.getItem('customerInfo')) || {};
+  document.getElementById('customer-name').textContent = customerInfo.name || 'Chưa có thông tin';
+  document.getElementById('customer-address').textContent = customerInfo.diachi || 'Chưa có thông tin';
+  document.getElementById('customer-phone').textContent = customerInfo.dienthoai || 'Chưa có thông tin';
+  document.getElementById('customer-email').textContent = customerInfo.email || 'Chưa có thông tin';
+  document.getElementById('payment-method').textContent = getPaymentMethod(customerInfo.httt_ma) || 'Chưa có thông tin';
+
+  // Hiển thị lịch sử đơn hàng
+  const orderHistoryElement = document.getElementById('order-history');
+  orderHistory.forEach((order, index) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${index + 1}</td>
+      <td>${new Date(order.date).toLocaleString()}</td>
+      <td>${order.totalPrice.toLocaleString()} đ</td>
+      <td>${order.totalQuantity}</td>
+      <td>${order.coupon || '-'}</td>
+      <td>${order.note || '-'}</td>
+    `;
+    orderHistoryElement.appendChild(row);
+  });
+});
+
+function getPaymentMethod(paymentId) {
+  switch (paymentId) {
+    case '1':
+      return 'Tiền mặt';
+    case '2':
+      return 'Chuyển khoản';
+    case '3':
+      return 'Ship COD';
+    default:
+      return 'Không xác định';
+  }
+}
+</script>
+</html>

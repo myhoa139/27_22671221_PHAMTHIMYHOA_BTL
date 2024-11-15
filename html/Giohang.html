@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="../images/logo5.png" type="image/x-icon">
+
+  <title>
+    Giftos
+  </title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../css/responsive.css" rel="stylesheet" />
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="../js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="../js/giohang.js"></script>
+  <script src="../js/log.js"></script>
+  <style>
+    .cart-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .cart-item-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        margin-right: 1rem;
+    }
+    .cart-item-details {
+        flex-grow: 1;
+    }
+    .cart-item-quantity {
+        width: 80px;
+        text-align: center;
+    }
+    .cart-item-total {
+        font-weight: bold;
+    }
+    .delete-confirmation {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: none;
+        }
+        .delete-confirmation-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+        .product-detail {
+    border: 1px solid #ddd; /* Đường viền xung quanh sản phẩm */
+    padding: 10px;          /* Khoảng cách bên trong */
+    margin-bottom: 10px;    /* Khoảng cách giữa các sản phẩm */
+    border-radius: 5px;     /* Đường viền bo tròn */
+    background-color: #f9f9f9; /* Màu nền cho sản phẩm */
+}
+
+.product-detail h5 {
+    margin: 0; /* Bỏ margin cho tiêu đề */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+.product-detail p {
+    margin: 0; /* Bỏ margin cho đoạn văn */
+    font-size: 14px; /* Kích thước chữ */
+}
+
+        .modal-content {
+            color: #fff;
+            border-radius: 15px;
+            border: none;
+            padding-top: 150px;
+        }
+        .modal-header {
+            border-bottom: none;
+        }
+        .modal-body {
+            background: rgba(0, 0, 0, 0.6); /* Nền tối để làm nổi bật nội dung */
+            border-radius: 0 0 15px 15px;
+        }
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.8); /* Nền nhập liệu sáng hơn */
+            color: #2c1fe2;
+        }
+</style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section sticky-md-top">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="./Trangchu.html">
+          <span>
+            <img src="../images/logohead.png" alt="" srcset="">
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="./Trangchu.html">Trang chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Tintuc.html">Tin tức</a>
+              <div class="dropdown">
+                <div class="dropdown-item"><a href="#">Quảng cáo</a></div>
+                <div class="dropdown-item"><a href="#">Dịch vụ tư vấn sửa chữa</a></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Cuahang.html">Cửa hàng</a>
+              <div class="dropdown">
+                <div class="dropdown-item"><a href="#">Bộ dụng cụ đa năng</a></div>
+                <div class="dropdown-item"><a href="#">Sơn tường</a></div>
+                <div class="dropdown-item"><a href="#">Máy khoan</a></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Gioithieu.html">Giới thiệu</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./Lienhe.html">Liên hệ</a>
+            </li>
+          </ul>
+          <div class="user_option">
+            <a href="">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span>Đăng nhập</span>
+            </a>
+            <a href="">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            </a>
+            <form class="form-inline ">
+              <button class="btn nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i> <input style="width: 130px; margin-left: 10px; border-radius: 10px;"type="text" placeholder="Search">
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end header section -->
+    <div class="container my-5" style="padding-top: 180px;">
+        <h2>GIỎ HÀNG (
+            <span id="cart-count">0</span>
+            sản phẩm)
+        </h2>
+        <div class="row">
+            <section class="col-lg-9 col-md-9 col-sm-9">
+                <table class="table">
+                    <thead>
+                        
+                    </thead>
+                    <tbody id="cart-items">
+
+                    </tbody>
+                </table>
+            </section>
+            <aside class="col-lg-3 col-md-3 col-sm-3">
+              <div class="card">
+                  <div class="card-body" style="border:1px solid black;">
+                      <h3 class="hd-title" style="font-size: 20px; font-weight: bold; text-align: center;">Hóa đơn</h3>
+                      <div class="cart-summary">
+                          <div class="d-flex justify-content-between">
+                              <span>Tổng tiền:</span>
+                              <span id="total-price">0 đ</span>
+                          </div>
+                          <div class="d-flex justify-content-between">
+                              <span>Số lượng sản phẩm:</span>
+                              <span id="total-quantity">0</span>
+                          </div>
+                          <ul id="product-details" class="list-unstyled mt-3"></ul>
+                          <button class="btn btn-danger" data-toggle="modal" data-target="#authModal">Thanh toán ngay</button>                      </div>
+                  </div>
+              </div>
+          </aside>
+        </div>
+    </div>
+    <div class="delete-confirmation">
+      <h4>Bạn có chắc muốn xóa sản phẩm này?</h4>
+      <div class="d-flex justify-content-end mt-3">
+          <button class="btn btn-secondary mr-2" onclick="hideDeleteConfirmation()">Hủy</button>
+          <button class="btn btn-danger" onclick="confirmDelete()">Xóa</button>
+      </div>
+  </div>
+  <div class="delete-confirmation-overlay"></div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="authModalLabel">Đăng Ký</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="authForm">
+                    <div class="form-group">
+                        <label for="username">Tên đăng nhập</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mật khẩu</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đăng Ký</button>
+                    <button type="button" class="btn btn-link" id="showLogin">Đã có tài khoản? Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Đăng Nhập -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Đăng Nhập</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginUsername">Tên đăng nhập</label>
+                        <input type="text" class="form-control" id="loginUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Mật khẩu</label>
+                        <input type="password" class="form-control" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+                    <button type="button" class="btn btn-link"  id="showRegister">Chưa có tài khoản? Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartCountElement = document.getElementById('cart-count');
+    const totalPriceElement = document.getElementById('total-price');
+    const totalQuantityElement = document.getElementById('total-quantity');
+    const productDetailsContainer = document.getElementById('product-details');
+    let totalPrice = 0;
+    let productToDelete;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        cart.forEach((product, index) => {
+            addProductToCart(product, index);
+        });
+        updateCartSummary();
+    });
+
+    function addProductToCart(product, index) {
+        const productElement = document.createElement('tr');
+        productElement.classList.add('cart-item');
+        productElement.setAttribute('data-index', index);
+        productElement.innerHTML = `
+            <td>
+                <img src="${product.image}" alt="${product.title}" class="cart-item-image" width="80">
+                <div class="cart-item-details">
+                    <h5>${product.title}</h5>
+                </div>
+            </td>
+            <td>${product.price}</td>
+            <td>
+                <div class="input-group cart-item-quantity">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary btn-sm" type="button" onclick="updateQuantity(this, -1)">-</button>
+                    </div>
+                    <input type="number" class="form-control form-control-sm" value="1" min="1" onchange="updateTotal(this)">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary btn-sm" type="button" onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                </div>
+            </td>
+            <td class="cart-item-total">${product.price}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" onclick="removeFromCart(this)">Xóa</button>
+            </td>
+        `;
+        cartItemsContainer.appendChild(productElement);
+    }
+
+    function updateQuantity(button, change) {
+        const quantityInput = button.closest('.cart-item-quantity').querySelector('input');
+        let quantity = parseInt(quantityInput.value);
+        quantity += change;
+
+        if (quantity < 1) {
+            showDeleteConfirmation(button);
+        } else {
+            quantityInput.value = quantity;
+            updateTotal(quantityInput);
+        }
+    }
+
+    function updateTotal(quantityInput) {
+        const cartItem = quantityInput.closest('.cart-item');
+        const priceElement = cartItem.querySelector('td:nth-child(2)');
+        const price = parseFloat(priceElement.textContent.replace(/\D/g, ''));
+        const quantity = parseInt(quantityInput.value);
+        const total = price * quantity;
+        cartItem.querySelector('.cart-item-total').textContent = `${total.toLocaleString()} đ`;
+        updateCartSummary();
+    }
+
+    function updateCartSummary() {
+    totalPrice = 0;
+    let totalQuantity = 0;
+    productDetailsContainer.innerHTML = '';
+
+    cart.forEach((product, index) => {
+        const quantity = 1; 
+        const price = parseFloat(product.price.replace(/\D/g, ''));
+        totalPrice += price;
+        totalQuantity += quantity;
+
+        const productDetail = document.createElement('div');
+        productDetail.className = 'product-detail'; 
+        productDetail.innerHTML = `
+            <h5>${product.title}</h5>
+            <p>Giá: ${price.toLocaleString()} đ</p>
+        `;
+        productDetailsContainer.appendChild(productDetail);
+    });
+
+    totalPriceElement.textContent = `${totalPrice.toLocaleString()} đ`;
+    totalQuantityElement.textContent = totalQuantity;
+    cartCountElement.textContent = cart.length;
+}
+
+    function showDeleteConfirmation(button) {
+        productToDelete = button.closest('.cart-item');
+        document.querySelector('.delete-confirmation').style.display = 'block';
+        document.querySelector('.delete-confirmation-overlay').style.display = 'block';
+    }
+
+    function hideDeleteConfirmation() {
+        document.querySelector('.delete-confirmation').style.display = 'none';
+        document.querySelector('.delete-confirmation-overlay').style.display = 'none';
+    }
+
+    function confirmDelete() {
+        const index = parseInt(productToDelete.getAttribute('data-index'));
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        productToDelete.remove();
+        updateCartSummary();
+        hideDeleteConfirmation();
+    }
+
+    document.getElementById('checkout-button').addEventListener('click', function() {
+    });
+</script>
+
+</body>
+
+</html>
