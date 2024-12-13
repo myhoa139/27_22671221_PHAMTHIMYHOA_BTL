@@ -65,6 +65,14 @@
 .card-img-sp{
   width: 300px; height: 300px;
 }
+#cart-count {
+    position:relative;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+}
 </style>
 </head>
 
@@ -115,7 +123,8 @@
               <span>Đăng nhập</span>
             </a>
             <a href="./Giohang.html">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              <i class="fa fa-shopping-bag" aria-hidden="true"><span id="cart-count">0</span></i>
+
             </a>
             <form class="form-inline ">
               <button class="btn nav_search-btn" type="submit">
@@ -140,9 +149,9 @@
             <div class="card product-card" data id="1">
                 <img src="./images/112.png" class="card-img-top" alt="Sản phẩm 1" >
                 <div class="card-body">
-                    <h5 class="card-title">Bộ dụng cụ đa năng 112Psc/h5>
+                    <h5 class="card-title">Bộ dụng cụ đa năng 112Psc</h5>
                     <p class="card-text">Giá: 1.080.000 VND</p>
-                    <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                    <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                     <a href="./sp1.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                 </div>
             </div>
@@ -151,9 +160,9 @@
               <div class="card product-card" data id="2">
                   <img src="./images/114.png" class="card-img-top" alt="Sản phẩm 1" style="width: 300px; height: 400px;">
                   <div class="card-body">
-                      <h5 class="card-title">Bộ dụng cụ đa năng 122Psc/h5>
+                      <h5 class="card-title">Bộ dụng cụ đa năng 122Psc</h5>
                       <p class="card-text">Giá: 2.980.000 VND</p>
-                      <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                      <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                       <a href="./sp2.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                   </div>
               </div>
@@ -162,9 +171,9 @@
               <div class="card product-card" data id="3">
                   <img src="./images/116.png" class="card-img-top" alt="Sản phẩm 1">
                   <div class="card-body">
-                      <h5 class="card-title">Bộ dụng cụ đa năng 136Psc/h5>
+                      <h5 class="card-title">Bộ dụng cụ đa năng 136Psc</h5>
                       <p class="card-text">Giá: 1.980.000 VND</p>
-                      <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                      <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                       <a href="./sp3.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                   </div>
               </div>
@@ -175,7 +184,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Máy khoan động lực pin 12V</h5>
                     <p class="card-text">Giá: 1.980.000 VND</p>
-                    <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                    <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                     <a href="./sp7.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                 </div>
             </div>
@@ -186,7 +195,7 @@
                   <div class="card-body">
                       <h5 class="card-title">Máy khoan động lực pin 18V</h5>
                       <p class="card-text">Giá: 2.980.000 VND</p>
-                      <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                      <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                       <a href="./sp4.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                   </div>
               </div>
@@ -198,7 +207,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Máy khoan động lực pin 12V</h5>
                     <p class="card-text">Giá: 1.980.000 VND</p>
-                    <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                    <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                     <a href="./sp4.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                 </div>
             </div>
@@ -210,7 +219,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Sơn tường Durax chống thấm cao cấp 2L</h5>
                             <p class="card-text">Giá: 1.080.000 VND</p>
-                            <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                            <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                             <a href="./sp4.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                         </div>
                     </div>
@@ -221,7 +230,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Sơn tường Durax chống thấm cao cấp 5L</h5>
                             <p class="card-text">Giá: 1.890.000 VND</p>
-                            <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                            <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                             <a href="./sp5.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                         </div>
                     </div>
@@ -232,7 +241,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Sơn tường Durax chống thấm cao cấp 18L</h5>
                             <p class="card-text">Giá: 2.890.000 VND</p>
-                            <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                            <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                             <a href="./sp6.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                         </div>
                     </div>

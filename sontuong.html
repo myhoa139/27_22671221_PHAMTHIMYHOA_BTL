@@ -27,7 +27,16 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
+<style>
+  #cart-count {
+    position:relative;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
 </head>
 <body>
   <div class="hero_area">
@@ -72,7 +81,7 @@
               <span>Đăng nhập</span>
             </a>
             <a href="./Giohang.html">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              <i class="fa fa-shopping-bag" aria-hidden="true"><span id="cart-count">0</span></i>
             </a>
             <form class="form-inline ">
               <button class="btn nav_search-btn" type="submit">
@@ -105,7 +114,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Sơn tường Durax chống thấm cao cấp 2L</h5>
                             <p class="card-text">Giá: 1.080.000 VND</p>
-                            <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                            <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                             <a href="./sp4.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                         </div>
                     </div>
@@ -116,7 +125,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Sơn tường Durax chống thấm cao cấp 5L</h5>
                             <p class="card-text">Giá: 1.890.000 VND</p>
-                            <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                            <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                             <a href="./sp5.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                         </div>
                     </div>
@@ -127,7 +136,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Sơn tường Durax chống thấm cao cấp 18L</h5>
                             <p class="card-text">Giá: 2.890.000 VND</p>
-                            <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                            <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                             <a href="./sp6.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                         </div>
                     </div>

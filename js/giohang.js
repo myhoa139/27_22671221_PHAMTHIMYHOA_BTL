@@ -23,4 +23,10 @@
               alert('Sản phẩm đã được thêm vào giỏ hàng!');
           });
       });
+      let cartCount = 0;
+
+document.getElementById('add-to-cart').addEventListener('click', function() {
+    cartCount++;
+    document.getElementById('cart-count').innerText = cartCount;
+});
   });

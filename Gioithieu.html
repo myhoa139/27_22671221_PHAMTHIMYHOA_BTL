@@ -89,6 +89,14 @@
     .img-gt:hover{
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
     }
+    #cart-count {
+    position:relative;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+}
   </style>
 </head>
 
@@ -139,7 +147,7 @@
               <span>Đăng nhập</span>
             </a>
             <a href="./Giohang.html">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              <i class="fa fa-shopping-bag" aria-hidden="true"><span id="cart-count">0</span></i>
             </a>
             <form class="form-inline ">
               <button class="btn nav_search-btn" type="submit">

@@ -89,24 +89,32 @@
     margin: 0; /* Bỏ margin cho đoạn văn */
     font-size: 14px; /* Kích thước chữ */
 }
-
-        .modal-content {
-            color: #fff;
+.modal-content {
+            color: #7a97f8;
+            font-weight: bold;
             border-radius: 15px;
             border: none;
-            padding-top: 150px;
+            padding-top: 180px;
         }
         .modal-header {
             border-bottom: none;
         }
         .modal-body {
-            background: rgba(0, 0, 0, 0.6); /* Nền tối để làm nổi bật nội dung */
+            background: rgba(253, 254, 255, 0.6); /* Nền tối để làm nổi bật nội dung */
             border-radius: 0 0 15px 15px;
         }
         .form-control {
-            background-color: rgba(255, 255, 255, 0.8); /* Nền nhập liệu sáng hơn */
+            background-color: rgba(140, 197, 243, 0.8); /* Nền nhập liệu sáng hơn */
             color: #2c1fe2;
         }
+        #cart-count {
+    position:relative;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+}
 </style>
 </head>
 
@@ -157,7 +165,8 @@
               <span>Đăng nhập</span>
             </a>
             <a href="./Giohang.html">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+
             </a>
             <form class="form-inline ">
               <button class="btn nav_search-btn" type="submit">
@@ -214,66 +223,66 @@
   </div>
   <div class="delete-confirmation-overlay"></div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="authModalLabel">Đăng Ký</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="authForm">
-                    <div class="form-group">
-                        <label for="username">Tên đăng nhập</label>
-                        <input type="text" class="form-control" id="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Mật khẩu</label>
-                        <input type="password" class="form-control" id="password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Đăng Ký</button>
-                    <button type="button" class="btn btn-link" id="showLogin">Đã có tài khoản? Đăng nhập</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal Đăng Nhập -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">Đăng Nhập</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="loginForm">
-                    <div class="form-group">
-                        <label for="loginUsername">Tên đăng nhập</label>
-                        <input type="text" class="form-control" id="loginUsername" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="loginPassword">Mật khẩu</label>
-                        <input type="password" class="form-control" id="loginPassword" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Đăng Nhập</button>
-                    <button type="button" class="btn btn-link"  id="showRegister">Chưa có tài khoản? Đăng ký</button>
-                </form>
+    <!-- Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalLabel" aria-hidden="true" style="background-image: url(./images/nha-pho-dep-1.png);">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel" style="color:#000000; font-weight: bold;">ĐĂNG KÍ TÀI KHOẢN </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="authForm">
+                        <div class="form-group">
+                            <label for="username">Tên Tài khoản</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng Ký</button>
+                        <button type="button" class="btn btn-link" id="showLogin">Đã có tài khoản? Đăng nhập</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
+    
+    <!-- Modal Tài khoản -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" style="background-image: url(./images/nha-pho-dep-1.png);">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel" style="color:black; font-weight: bold; ">ĐĂNG NHẬP</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginUsername">Tên Tài khoản</label>
+                            <input type="text" class="form-control" id="loginUsername" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Mật khẩu</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                        <button type="button" class="btn btn-link"  id="showRegister">Chưa có tài khoản? Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
   <script>
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartItemsContainer = document.getElementById('cart-items');

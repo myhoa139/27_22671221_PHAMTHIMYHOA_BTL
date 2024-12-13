@@ -15,7 +15,7 @@
     alert('Đăng ký thành công!');
 
     // Đóng modal đăng ký
-    $('#authModal').modal('hide');
+
 });
 
 // Chuyển sang modal đăng nhập

@@ -31,6 +31,14 @@
 .card-img-sp{
   width: 300px; height: 300px;
 }
+#cart-count {
+    position:relative;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+}
  </style>
 </head>
 <body>
@@ -76,7 +84,7 @@
               <span>Đăng nhập</span>
             </a>
             <a href="./Giohang.html">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              <i class="fa fa-shopping-bag" aria-hidden="true"><span id="cart-count">0</span></i>
             </a>
             <form class="form-inline ">
               <button class="btn nav_search-btn" type="submit">
@@ -98,7 +106,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Bộ dụng cụ đa năng 112Psc/h5>
                         <p class="card-text">Giá: 1.080.000 VND</p>
-                        <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                        <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                         <a href="./sp1.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                     </div>
                 </div>
@@ -109,7 +117,7 @@
                       <div class="card-body">
                           <h5 class="card-title">Bộ dụng cụ đa năng 122Psc/h5>
                           <p class="card-text">Giá: 2.980.000 VND</p>
-                          <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                          <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                           <a href="./sp2.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                       </div>
                   </div>
@@ -120,7 +128,7 @@
                       <div class="card-body">
                           <h5 class="card-title">Bộ dụng cụ đa năng 136Psc/h5>
                           <p class="card-text">Giá: 1.980.000 VND</p>
-                          <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                          <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                           <a href="./sp3.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                       </div>
                   </div>
@@ -131,7 +139,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Bộ dụng cụ cắt khoan đa năng 112 Pcs</h5>
                         <p class="card-text">Giá: 1.590.000 VND</p>
-                        <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                        <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                         <a href="./sp3.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                     </div>
                 </div>
@@ -142,7 +150,7 @@
                   <div class="card-body">
                       <h5 class="card-title">Bộ dụng cụ cắt khoan đa năng 122 Pcs</h5>
                       <p class="card-text">Giá: 2.800.000 VND</p>
-                      <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                      <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                       <a href="./sp3.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                   </div>
               </div>
@@ -154,7 +162,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Bộ dụng cụ cắt khoan đa năng 136 Pcs</h5>
                         <p class="card-text">Giá: 2.990.000 VND</p>
-                        <button class="btn btn-primary btn-custom">Thêm vào giỏ hàng</button>
+                        <button class="btn btn-primary btn-custom" id="add-to-cart">Thêm vào giỏ hàng</button>
                         <a href="./sp3.html"><button class="btn btn-success btn-custom">Xem chi tiết</button></a>
                     </div>
                 </div>
